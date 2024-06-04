@@ -1,0 +1,23 @@
+import * as React from "react";
+import {
+  Create,
+  SimpleForm,
+  CreateProps,
+  NumberInput,
+  TextInput,
+} from "react-admin";
+
+export const NutritionCreate = (props: CreateProps): React.ReactElement => {
+  return (
+    <Create {...props}>
+      <SimpleForm>
+        <NumberInput step={1} label="calories" source="calories" />
+        <NumberInput step={1} label="carbohydrates" source="carbohydrates" />
+        <TextInput label="description" multiline source="description" />
+        <NumberInput step={1} label="fats" source="fats" />
+        <TextInput label="name" source="name" />
+        <NumberInput step={1} label="proteins" source="proteins" />
+      </SimpleForm>
+    </Create>
+  );
+};
